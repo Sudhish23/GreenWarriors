@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Input Form</title>
+<link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+  <h1>Enter Your Information</h1>
+
+    <img src="./Save-Environment-Essay.jpg" alt="two childrens making effort to make earth a better place.">
+         
+  <form id="user-form">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="region">Region:</label>
+      <input type="text" id="region" name="region" required>
+    </div>
+    <div>
+      <label for="problems">Problems:</label>
+      <textarea id="problems" name="problems" rows="10" cols="50" required></textarea>
+    </div>
+    <div>
+      <label for="solutions">Solutions:</label>
+      <textarea id="solutions" name="solutions" rows="10" cols="50" required></textarea>
+    </div>
+    <button style="color: chartreuse;" type="submit">Submit</button>
+  </form>
+  <div id="output"></div>
+  <script src="./script.js"></script>
+  
+  <script>
+    const form = document.getElementById('user-form');
+    const outputDiv = document.getElementById('output');
+
+    form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const region = document.getElementById('region').value;
+    const problems = document.getElementById('problems').value;
+    const solutions = document.getElementById('solutions').value;
+
+    
+
+    outputDiv.innerHTML = `
+     <h2>Your Information:</h2>
+     <p>Name: ${name}</p>
+     <p>Region: ${region}</p>
+     <p>Problems:</p>
+     <p>${problems}</p>
+     <p>Solutions:</p>
+     <p>${solutions}</p>
+   ` ;
+
+    form.reset();
+    });
+
+  </script>
+   
+</body>
+</html>
+
+  
