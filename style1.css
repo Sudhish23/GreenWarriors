@@ -40,7 +40,7 @@ padding: 15px;
     float:right; /* Float the image to the right */
     width: 40%;   /* Adjust the width as needed */
     margin-left: 1%; /* Optional: Add space between form and image */
-    padding: 40px;
+    padding: 0px;
     height: 400px;
     
   }
